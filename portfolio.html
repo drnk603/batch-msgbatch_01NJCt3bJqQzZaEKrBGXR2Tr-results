@@ -12,27 +12,34 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="./header-footer.css">
+</head>
  <body>
-  <header class="l-header navbar navbar-expand-md sticky-top bg-white border-bottom" role="banner">
-   <div class="container">
-    <a class="c-logo navbar-brand" href="/" aria-label="AutoLux Nederland Homepage"> <img src="img/14602672.jpg" alt="AutoLux Nederland" class="c-logo__img" width="150" height="40"> <span class="c-logo__text visually-hidden">AutoLux Nederland</span> </a>
-    <div class="d-flex align-items-center order-md-3">
-     <a href="#contact" class="btn btn-primary me-3">OFFERTE AANVRAGEN</a>
-    </div>
-    <button class="c-nav__toggle navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Navigatie menu"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse order-md-2" id="main-nav">
-     <nav class="c-nav" role="navigation">
-      <ul class="c-nav__list navbar-nav ms-auto">
-       <li class="nav-item"><a class="nav-link" href="/" aria-current="page">HOME</a></li>
-       <li class="nav-item"><a class="nav-link" href="about.html">OVER ONS</a></li>
-       <li class="nav-item"><a class="nav-link" href="services.html">DIENSTEN</a></li>
-       <li class="nav-item"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+  <header class="hf-header" aria-label="Hoofd navigatie">
+  <div class="hf-header-inner">
+    <a class="hf-brand" href="./">
+      <div class="hf-brand-mark" aria-hidden="true"></div>
+      <div class="hf-brand-text-wrap">
+        <span class="hf-brand-title">AutoFuture Premium</span>
+        <span class="hf-brand-subtitle">Exclusive automotive experiences</span>
+      </div>
+    </a>
+    <button class="hf-nav-toggle" type="button" aria-label="Navigatie openen" aria-expanded="false">
+      <span class="hf-nav-toggle-bar"></span>
+      <span class="hf-nav-toggle-bar"></span>
+    </button>
+    <nav class="hf-nav" aria-label="Primair">
+      <ul class="hf-nav-list">
+        <li class="hf-nav-item"><a class="hf-nav-link" href="./">Home</a></li>
+        <li class="hf-nav-item"><a class="hf-nav-link" href="./about.html">Over Ons</a></li>
+        <li class="hf-nav-item"><a class="hf-nav-link" href="./services.html">Diensten</a></li>
+        <li class="hf-nav-item"><a class="hf-nav-link" href="./portfolio.html">Portfolio</a></li>
       </ul>
-     </nav>
-    </div>
-   </div>
-  </header>
+      <a class="hf-nav-cta" href="./services.html">Plan een consult</a>
+    </nav>
+  </div>
+</header>
   <main>
    <nav aria-label="breadcrumb" class="py-3">
     <div class="container">
@@ -277,69 +284,47 @@
     </div>
    </div>
   </div>
-  <footer class="l-footer bg-dark text-white pt-5 pb-3" role="contentinfo">
-   <div class="container">
-    <div class="row">
-     <div class="col-lg-4 mb-4">
-      <a href="/" class="c-logo d-inline-block mb-3"> <img src="img/14602672.jpg" alt="AutoLux Nederland" width="150" height="40" class="img-fluid"> </a>
-      <p class="text-light">AutoLux Nederland is uw vertrouwde partner voor premium automotive services. Wij combineren vakmanschap met innovatie voor optimale resultaten.</p>
-     </div>
-     <div class="col-lg-2 col-md-6 mb-4">
-      <h5 class="fw-bold mb-3">NAVIGATIE</h5>
-      <ul class="list-unstyled">
-       <li><a href="/" class="text-light text-decoration-none">Home</a></li>
-       <li><a href="about.html" class="text-light text-decoration-none">Over Ons</a></li>
-       <li><a href="services.html" class="text-light text-decoration-none">Diensten</a></li>
-       <li><a href="portfolio.html" class="text-light text-decoration-none">Portfolio</a></li>
-      </ul>
-     </div>
-     <div class="col-lg-3 col-md-6 mb-4">
-      <h5 class="fw-bold mb-3">CONTACT</h5>
-      <address class="text-light">
-       <div class="mb-2">
-        <strong>AutoLux Nederland</strong>
-        <br>
-        Prinsengracht 263
-        <br>
-        1016 GV Amsterdam
-        <br>
-        Nederland
-       </div>
-       <div class="mb-2">
-        <strong>Telefoon:</strong> +31-20-123-4567
-       </div>
-       <div>
-        <strong>E-mail:</strong> info@domain.com
-       </div>
-      </address>
-     </div>
-     <div class="col-lg-3 col-md-12 mb-4">
-      <h5 class="fw-bold mb-3">OPENINGSTIJDEN</h5>
-      <div class="text-light">
-       <div class="d-flex justify-content-between mb-1">
-        <span>Ma - Vr:</span> <span>08:00 - 18:00</span>
-       </div>
-       <div class="d-flex justify-content-between mb-1">
-        <span>Zaterdag:</span> <span>09:00 - 16:00</span>
-       </div>
-       <div class="d-flex justify-content-between">
-        <span>Zondag:</span> <span>Gesloten</span>
-       </div>
-       <small class="text-muted d-block mt-2">24/7 Emergency Service beschikbaar</small>
+  <footer class="hf-footer" aria-label="Site footer">
+  <div class="hf-footer-inner">
+    <section class="hf-footer-brand">
+      <div class="hf-footer-brand-mark" aria-hidden="true"></div>
+      <div class="hf-footer-brand-text">
+        <h2 class="hf-footer-title">AutoFuture Premium</h2>
+        <p class="hf-footer-tagline">Premium begeleiding bij aankoop, verkoop en styling van uw auto.</p>
       </div>
-     </div>
-    </div>
-    <hr class="my-4 border-secondary">
-    <div class="row align-items-center">
-     <div class="col-md-6">
-      <p class="mb-0 text-light">© 2025 AutoLux Nederland. Alle rechten voorbehouden.</p>
-     </div>
-     <div class="col-md-6 text-md-end">
-      <a href="privacy.html" class="text-light text-decoration-none me-3">Privacybeleid</a> <a href="#" class="text-light text-decoration-none">Algemene Voorwaarden</a>
-     </div>
-    </div>
-   </div>
-  </footer>
+    </section>
+    <section class="hf-footer-grid" aria-label="Footer navigatie">
+      <div class="hf-footer-column">
+        <h3 class="hf-footer-heading">Navigatie</h3>
+        <ul class="hf-footer-links">
+          <li><a href="./">Home</a></li>
+          <li><a href="./about.html">Over Ons</a></li>
+          <li><a href="./services.html">Diensten</a></li>
+          <li><a href="./portfolio.html">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="hf-footer-column">
+        <h3 class="hf-footer-heading">Juridisch</h3>
+        <ul class="hf-footer-links">
+          <li><a href="./privacy.html">Privacybeleid</a></li>
+          <li><a href="./#">Algemene Voorwaarden</a></li>
+        </ul>
+      </div>
+      <div class="hf-footer-column">
+        <h3 class="hf-footer-heading">Contact</h3>
+        <div class="hf-footer-meta">
+          <p>Persoonlijk advies voor uw volgende premium auto. Bereikbaar op werkdagen tijdens kantooruren.</p>
+          <p class="hf-footer-meta-note">Vraag een vrijblijvend consult aan via het contactformulier.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="hf-footer-bottom">
+    <p class="hf-footer-copy">\u00a9 <span class="hf-footer-year"></span> AutoFuture Premium. Alle rechten voorbehouden.</p>
+  </div>
+</footer>
   <script src="script.js" defer=""></script>
  
+<script src="./header-footer.js"></script>
+<script src="./consent.js"></script>
 </body></html>

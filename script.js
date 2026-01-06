@@ -38,13 +38,13 @@
     class BurgerMenuController {
         constructor() {
             this.nav = document.querySelector('.navbar-collapse');
-            this.toggle = document.querySelector('.navbar-toggler');
+            this.toggleButton = document.querySelector('.navbar-toggler');
             this.overlay = null;
             this.init();
         }
 
         init() {
-            if (!this.nav || !this.toggle) return;
+            if (!this.nav || !this.toggleButton) return;
 
             this.createOverlay();
             this.bindEvents();
@@ -71,7 +71,7 @@
 
         open() {
             this.nav.classList.add('show');
-            this.toggle.setAttribute('aria-expanded', 'true');
+            this.toggleButton.setAttribute('aria-expanded', 'true');
             document.body.style.overflow = 'hidden';
             
             if (this.overlay) {
@@ -84,7 +84,7 @@
 
         close() {
             this.nav.classList.remove('show');
-            this.toggle.setAttribute('aria-expanded', 'false');
+            this.toggleButton.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
             
             if (this.overlay) {
@@ -95,7 +95,7 @@
             this.nav.style.height = '';
         }
 
-        toggle() {
+        toggleMenu() {
             if (this.nav.classList.contains('show')) {
                 this.close();
             } else {
@@ -104,9 +104,9 @@
         }
 
         bindEvents() {
-            this.toggle.addEventListener('click', (e) => {
+            this.toggleButton.addEventListener('click', (e) => {
                 e.preventDefault();
-                this.toggle();
+                this.toggleMenu();
             });
 
             if (this.overlay) {
@@ -141,8 +141,8 @@
             this.forms = document.querySelectorAll('.needs-validation, .c-form, .c-contact-form');
             this.patterns = {
                 email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                phone: /^[\d\s\+\-\(\)]{10,20}$/,
-                name: /^[a-zA-ZÀ-ÿ\s\-']{2,50}$/,
+                phone: /^[\d\s+\-()]{10,20}$/,
+                name: /^[a-zA-ZÀ-Ÿ\s\-']{2,50}$/,
                 message: /^.{10,1000}$/
             };
             this.init();
@@ -174,7 +174,7 @@
             let isValid = true;
             let errorMessage = '';
 
-            if (field.hasAttribute('required') && !value) {
+            if (field.hasAttribute('required') && !value && field.type !== 'checkbox') {
                 isValid = false;
                 errorMessage = 'Dit veld is verplicht';
             } else if (value) {
